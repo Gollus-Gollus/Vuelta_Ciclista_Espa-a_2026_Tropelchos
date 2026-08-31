@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="UTF-8">
 <script>
 /* ── Anti-caché automático ──────────────────────────────────
@@ -13,7 +12,9 @@
    cualquier caché, porque para la caché es "una URL distinta".
    Se autolimita a 2 intentos para no entrar en bucle. */
 (function(){
-  var BUILD_ID = /*__MARCA_BUILD_INICIO__*/"20260815205156"/*__MARCA_BUILD_FIN__*/;
+  var BUILD_ID = /*__MARCA_BUILD_INICIO__*/
+"20260901011348"
+/*__MARCA_BUILD_FIN__*/;
   window.BUILD_ID = BUILD_ID;
   try{
     // Solo actuar si esto es una página realmente publicada (http/https
@@ -1720,15 +1721,11 @@ if(typeof NodeList!=='undefined'&&NodeList.prototype&&!NodeList.prototype.forEac
         Marca la celda de un jugador con su nombre, una X, un 1, etc.
       </p>
       <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-        <button type="button" class="btn-primary" style="background:var(--azul);border-color:var(--azul)"
-          onclick="document.getElementById('file-ciclistas').click()">
+        <button type="button" class="btn-primary" style="background:var(--azul);border-color:var(--azul)" onclick="document.getElementById('file-ciclistas').click()">
           📂 Subir Excel de ciclistas
         </button>
-        <input type="file" id="file-ciclistas" accept=".xlsx,.xls,.xlsm"
-          style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden"
-          onchange="cargarXLSXCiclistas(this)">
-        <button type="button" class="btn-small" onclick="generarHTMLConDatosGrabados()"
-          title="Descarga una copia de este archivo con los ciclistas, jugadores y resultados actuales ya incluidos, sin tener que volver a importarlos">
+        <input type="file" id="file-ciclistas" accept=".xlsx,.xls,.xlsm" style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden" onchange="cargarXLSXCiclistas(this)">
+        <button type="button" class="btn-small" onclick="generarHTMLConDatosGrabados()" title="Descarga una copia de este archivo con los ciclistas, jugadores y resultados actuales ya incluidos, sin tener que volver a importarlos">
           💾 Guardar copia con estos datos
         </button>
         <span id="ciclistas-status" style="font-size:.75rem;color:var(--texto2)"></span>
@@ -1739,8 +1736,7 @@ if(typeof NodeList!=='undefined'&&NodeList.prototype&&!NodeList.prototype.forEac
         sin depender de la nube.
       </p>
       <div id="ciclistas-preview" style="display:none;margin-top:12px">
-        <div style="font-size:.75rem;font-weight:bold;color:var(--azul);margin-bottom:8px"
-          id="ciclistas-preview-titulo"></div>
+        <div style="font-size:.75rem;font-weight:bold;color:var(--azul);margin-bottom:8px" id="ciclistas-preview-titulo"></div>
         <div style="overflow-x:auto;margin-bottom:10px">
           <table id="tabla-ciclistas-preview" style="font-size:.72rem">
             <thead><tr id="thead-cic-prev"></tr></thead>
@@ -1768,8 +1764,7 @@ if(typeof NodeList!=='undefined'&&NodeList.prototype&&!NodeList.prototype.forEac
         <span style="font-size:.75rem;color:var(--texto2)" id="xlsx-status">Ningún fichero cargado</span>
       </div>
       <div style="margin-top:12px;padding-top:12px;border-top:1px dashed var(--linea);display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-        <button type="button" class="btn-sec" style="border-color:var(--verde);color:var(--verde)" onclick="generarHTMLConDatosGrabados()"
-          title="Descarga una copia de este archivo con los últimos resultados ya incorporados, lista para subir a tu hosting (GitHub Pages, Netlify...)">
+        <button type="button" class="btn-sec" style="border-color:var(--verde);color:var(--verde)" onclick="generarHTMLConDatosGrabados()" title="Descarga una copia de este archivo con los últimos resultados ya incorporados, lista para subir a tu hosting (GitHub Pages, Netlify...)">
           💾 Grabar nueva versión con estos resultados
         </button>
         <span style="font-size:.72rem;color:var(--texto2)">Súbela después a tu hosting para que todos vean los datos al día</span>
@@ -1815,16 +1810,13 @@ if(typeof NodeList!=='undefined'&&NodeList.prototype&&!NodeList.prototype.forEac
         como de la nube compartida. Todos los que tengan el enlace lo verán vacío.
         Esta acción no se puede deshacer.
       </p>
-      <button type="button" class="btn-sec" style="border-color:var(--rojo);color:var(--rojo)"
-        onclick="borrarTodosLosDatos()">
+      <button type="button" class="btn-sec" style="border-color:var(--rojo);color:var(--rojo)" onclick="borrarTodosLosDatos()">
         🗑️ Borrar todos los datos
       </button>
     </div>
   </div>
 
-  <div class="upload-zone" id="drop-zone"
-       onclick="document.getElementById('file-input').click()"
-       ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
+  <div class="upload-zone" id="drop-zone" onclick="document.getElementById('file-input').click()" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
     <div class="upload-ico">📂</div>
     <h3>Subir resultado de etapa (JSON / CSV)</h3>
     <p>Arrastra un archivo JSON o CSV aquí, o haz clic para seleccionarlo</p>
@@ -2058,12 +2050,12 @@ const CONFIG = {
     se asignen automáticamente de la paleta de abajo.            */
 /*__MARCA_JUGADORES_INICIO__*/
 const JUGADORES_CONFIG = [
-  { nombre: "Carlos", color: "#ff1744" },
-  { nombre: "Eugenio", color: "#ffc400" },
-  { nombre: "Gollus", color: "#2979ff" },
-  { nombre: "Héctor", color: "#00e676" },
-  { nombre: "Jaime", color: "#d500f9" },
-  { nombre: "Nacho", color: "#ff6d00" },
+  { nombre: "CARLOS", color: "#e8005a" },
+  { nombre: "EUGENIO", color: "#4a9eff" },
+  { nombre: "GOLLUS", color: "#22d47a" },
+  { nombre: "HÉCTOR", color: "#f5c842" },
+  { nombre: "JAIME", color: "#ff7043" },
+  { nombre: "NACHO", color: "#ab47bc" },
 ];
 /*__MARCA_JUGADORES_FIN__*/
 
@@ -2110,190 +2102,190 @@ const ETAPAS = [
                (puede ser elegido por 0, 1 o varios jugadores)             */
 /*__MARCA_CICLISTAS_INICIO__*/
 const CICLISTAS_BASE = [
-  {nombre:"Pogačar, Tadej", equipo:"UEX", cat:"Máximos favoritos", jugadores:["Carlos", "Eugenio", "Gollus", "Héctor", "Nacho"]},
-  {nombre:"Hayter, Ethan", equipo:"SOQ", cat:"Cazadores y especialistas", jugadores:["Carlos", "Héctor", "Jaime"]},
-  {nombre:"Tarling, Joshua", equipo:"NCI", cat:"Cazadores y especialistas", jugadores:[]},
-  {nombre:"Thornley, Callum", equipo:"RBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Laporte, Christophe", equipo:"TVL", cat:"Gregarios", jugadores:["Gollus"]},
-  {nombre:"Bisiaux, Léo", equipo:"DCT", cat:"Escaladores", jugadores:["Eugenio"]},
-  {nombre:"Chamberlain, Oscar", equipo:"DCT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Van Aert, Wout", equipo:"TVL", cat:"A por el verde", jugadores:["Carlos", "Eugenio", "Gollus", "Héctor", "Jaime", "Nacho"]},
-  {nombre:"Fisher-Black, Finn", equipo:"RBH", cat:"Cazadores y especialistas", jugadores:[]},
-  {nombre:"Kluckers, Arthur", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Romele, Alessandro", equipo:"XAT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Küng, Stefan", equipo:"TUD", cat:"Cazadores y especialistas", jugadores:["Carlos", "Eugenio", "Héctor"]},
-  {nombre:"Vine, Jay", equipo:"UEX", cat:"Favoritos", jugadores:["Carlos"]},
-  {nombre:"Oliveira, Ivo", equipo:"UEX", cat:"Gregarios", jugadores:[]},
-  {nombre:"Pedersen, Mads", equipo:"LTK", cat:"A por el verde", jugadores:[]},
-  {nombre:"Brennan, Matthew", equipo:"TVL", cat:"Sprinters", jugadores:["Carlos", "Eugenio", "Héctor"]},
-  {nombre:"De Pestel, Sander", equipo:"DCT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Almeida, Joao", equipo:"UEX", cat:"Máximos favoritos", jugadores:["Jaime"]},
-  {nombre:"Romeo, Ivan", equipo:"MOV", cat:"Gregarios", jugadores:["Carlos"]},
-  {nombre:"Tiller, Rasmus", equipo:"UXM", cat:"Gregarios", jugadores:[]},
-  {nombre:"Aparicio, Mario", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Arcas, Jorge", equipo:"MOV", cat:"Gregarios", jugadores:["Nacho"]},
-  {nombre:"Azparren, Xabier Mikel", equipo:"PQT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Barta, William", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Faura, José Luis", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Bennett, George", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Bernard, Julien", equipo:"LTK", cat:"Gregarios", jugadores:[]},
-  {nombre:"Berrade, Urko", equipo:"EKP", cat:"Gregarios", jugadores:["Eugenio", "Héctor", "Jaime"]},
-  {nombre:"Berthet, Clement", equipo:"GFC", cat:"Escaladores", jugadores:["Nacho"]},
-  {nombre:"Bilbao, Pello", equipo:"TBV", cat:"Escaladores", jugadores:[]},
-  {nombre:"Brenner, Marco", equipo:"TUD", cat:"Gregarios", jugadores:["Jaime"]},
-  {nombre:"Buitrago, Santiago", equipo:"TBV", cat:"Favoritos", jugadores:["Eugenio", "Gollus", "Jaime"]},
-  {nombre:"Carapaz, Richard", equipo:"EFE", cat:"Máximos favoritos", jugadores:["Eugenio"]},
-  {nombre:"Langellotti, Victor", equipo:"NCI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Coquard, Bryan", equipo:"COF", cat:"Sprinters", jugadores:["Carlos", "Gollus", "Héctor", "Nacho"]},
-  {nombre:"Cort, Magnus", equipo:"UXM", cat:"Cazadores y especialistas", jugadores:["Gollus"]},
-  {nombre:"Covi, Alessandro", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"De la Cruz, David", equipo:"PQT", cat:"Gregarios", jugadores:["Carlos", "Nacho"]},
-  {nombre:"Dainese, Alberto", equipo:"SOQ", cat:"Sprinters", jugadores:["Eugenio", "Gollus", "Jaime"]},
-  {nombre:"Rouland, Louis", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"Díaz, José Manuel", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Elosegui, Iñigo", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Fedorov, Yevgeniy", equipo:"XAT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Gall, Felix", equipo:"DCT", cat:"Máximos favoritos", jugadores:["Gollus", "Héctor", "Jaime"]},
-  {nombre:"Groves, Kaden", equipo:"APT", cat:"Gregarios", jugadores:["Eugenio", "Gollus", "Jaime"]},
-  {nombre:"Hirt, Jan", equipo:"NSN", cat:"Gregarios", jugadores:["Carlos"]},
-  {nombre:"Hamilton, Lucas", equipo:"NCI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Haig, Jack", equipo:"NCI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Herrada, Jesus", equipo:"BBH", cat:"Gregarios", jugadores:["Gollus"]},
-  {nombre:"Hofstetter, Hugo", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Wenzel, Mats", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Kämna, Lennard", equipo:"LTK", cat:"Gregarios", jugadores:[]},
-  {nombre:"Kruijswijk, Steven", equipo:"TVL", cat:"Gregarios", jugadores:[]},
-  {nombre:"Konrad, Patrick", equipo:"LTK", cat:"Gregarios", jugadores:[]},
-  {nombre:"Kuss, Sepp", equipo:"TVL", cat:"Favoritos", jugadores:["Carlos", "Héctor", "Nacho"]},
-  {nombre:"Kron, Andreas", equipo:"UXM", cat:"Cazadores y especialistas", jugadores:["Jaime"]},
-  {nombre:"Rodriguez Contreras, Juan Felipe", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Le Gac, Olivier", equipo:"GFC", cat:"Gregarios", jugadores:[]},
-  {nombre:"Leemreize, Gijs", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Leknessund, Andreas", equipo:"UXM", cat:"Gregarios", jugadores:["Eugenio", "Héctor", "Jaime"]},
-  {nombre:"Landa, Mikel", equipo:"SOQ", cat:"Escaladores", jugadores:["Carlos", "Gollus", "Nacho"]},
-  {nombre:"Lutsenko, Alexey", equipo:"NSN", cat:"Gregarios", jugadores:["Carlos"]},
-  {nombre:"Madouas, Valentin", equipo:"GFC", cat:"Gregarios", jugadores:[]},
-  {nombre:"Mas, Enric", equipo:"MOV", cat:"Favoritos", jugadores:["Carlos", "Nacho"]},
-  {nombre:"Meeus, Jordi", equipo:"RBH", cat:"Sprinters", jugadores:["Jaime"]},
-  {nombre:"Molard, Rudy", equipo:"GFC", cat:"Gregarios", jugadores:["Carlos"]},
-  {nombre:"Mosca, Jacopo", equipo:"LTK", cat:"Gregarios", jugadores:[]},
-  {nombre:"Mühlberger, Gregor", equipo:"DCT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Moscon, Gianni", equipo:"RBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Norsgaard, Mathias", equipo:"LTK", cat:"Gregarios", jugadores:[]},
-  {nombre:"Novak, Domen", equipo:"UEX", cat:"Gregarios", jugadores:[]},
-  {nombre:"Dunbar, Edward", equipo:"PQT", cat:"Gregarios", jugadores:["Carlos", "Héctor", "Jaime", "Nacho"]},
-  {nombre:"Ourselin, Paul", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"González, David", equipo:"PQT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Vermaerke, Kevin", equipo:"UEX", cat:"Gregarios", jugadores:[]},
-  {nombre:"Renard, Alexis", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"Rota, Lorenzo", equipo:"LOI", cat:"Gregarios", jugadores:["Gollus"]},
-  {nombre:"Rochas, Remy", equipo:"GFC", cat:"Gregarios", jugadores:[]},
-  {nombre:"Rodriguez Cano, Carlos", equipo:"NCI", cat:"Favoritos", jugadores:["Eugenio", "Gollus", "Nacho"]},
-  {nombre:"Roglič, Primož", equipo:"RBH", cat:"Máximos favoritos", jugadores:["Carlos", "Nacho"]},
-  {nombre:"Roosen, Timo", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Samitier, Sergio", equipo:"COF", cat:"Gregarios", jugadores:["Gollus"]},
-  {nombre:"Ruiz, Ibon", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Schultz, Nick", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Fortunato, Lorenzo", equipo:"XAT", cat:"Escaladores", jugadores:["Carlos", "Gollus"]},
-  {nombre:"Shaw, James", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Skjelmose Jensen, Mattias", equipo:"LTK", cat:"Favoritos", jugadores:["Eugenio", "Gollus", "Héctor", "Jaime"]},
-  {nombre:"Sivakov, Pavel", equipo:"UEX", cat:"Gregarios", jugadores:[]},
-  {nombre:"Tejada, Harold", equipo:"XAT", cat:"Escaladores", jugadores:["Jaime"]},
-  {nombre:"Thalmann, Roland", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Tulett, Ben", equipo:"TVL", cat:"Favoritos", jugadores:["Héctor", "Jaime"]},
-  {nombre:"Kretschy, Moritz", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Valter, Attila", equipo:"TBV", cat:"Gregarios", jugadores:[]},
-  {nombre:"Vansevenant, Mauri", equipo:"SOQ", cat:"Gregarios", jugadores:[]},
-  {nombre:"Wandahl, Frederik", equipo:"RBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Warbasse, Larry", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Zana, Filippo", equipo:"SOQ", cat:"Cazadores y especialistas", jugadores:["Gollus", "Nacho"]},
-  {nombre:"Steinhauser, Georg", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Turner, Ben", equipo:"NCI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Vader, Milan", equipo:"PQT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Brustenga, Marc", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Laurance, Axel", equipo:"NCI", cat:"Cazadores y especialistas", jugadores:["Héctor"]},
-  {nombre:"Braet, Vito", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Dversnes, Fredrik", equipo:"UXM", cat:"Gregarios", jugadores:[]},
-  {nombre:"Cobo Cayon, Ivan", equipo:"EKP", cat:"Gregarios", jugadores:["Nacho"]},
-  {nombre:"Hellemose, Asbjorn", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"Uijtdebroeks, Cian", equipo:"MOV", cat:"Favoritos", jugadores:[]},
-  {nombre:"Miquel, Pau", equipo:"TBV", cat:"Gregarios", jugadores:["Eugenio", "Gollus", "Héctor"]},
-  {nombre:"Johannessen, Tobias Haaland", equipo:"UXM", cat:"Favoritos", jugadores:[]},
-  {nombre:"Hamilton, Chris", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Gogl, Michael", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Mulubrhan, Henok", equipo:"XAT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Govekar, Matevž", equipo:"TBV", cat:"Gregarios", jugadores:[]},
-  {nombre:"Paret-Peintre, Valentin", equipo:"SOQ", cat:"Escaladores", jugadores:["Eugenio", "Héctor"]},
-  {nombre:"Weiss, Fabian", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Fernandez Rodriguez, Sinuhe", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"De Vylder, Lindsay", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"McKenzie, Hamish", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"Sentjens, Sente", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Van den Bossche, Fabio", equipo:"SOQ", cat:"Gregarios", jugadores:[]},
-  {nombre:"Omrzel, Jakob", equipo:"TBV", cat:"Gregarios", jugadores:[]},
-  {nombre:"Martin-Guyonnet, Guillaume", equipo:"GFC", cat:"Escaladores", jugadores:[]},
-  {nombre:"Svestad-Bårdseng, Embret", equipo:"NCI", cat:"Gregarios", jugadores:[]},
-  {nombre:"de Jong, Timo", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Gaffuri, Mattia", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Haquin, Henri-Francois", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Peace, Oliver", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Armirail, Bruno", equipo:"TVL", cat:"Cazadores y especialistas", jugadores:[]},
-  {nombre:"Canal, Carlos", equipo:"MOV", cat:"Gregarios", jugadores:[]},
-  {nombre:"Paasschens, Mathijs", equipo:"TBV", cat:"Gregarios", jugadores:[]},
-  {nombre:"Moniquet, Sylvain", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"Bouwman, Koen", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"Sosa, Iván Ramiro", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"De Schuyteneer, Stefen", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Sütterlin, Jasha", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"Rodriguez, Cristian", equipo:"XAT", cat:"Gregarios", jugadores:["Eugenio", "Héctor"]},
-  {nombre:"Kirsch, Alex", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"Tronchon, Bastien", equipo:"GFC", cat:"Gregarios", jugadores:[]},
-  {nombre:"Paleni, Enzo", equipo:"GFC", cat:"Gregarios", jugadores:[]},
-  {nombre:"Porter, Rudy", equipo:"JAY", cat:"Gregarios", jugadores:[]},
-  {nombre:"Nys, Thibau", equipo:"LTK", cat:"Cazadores y especialistas", jugadores:["Eugenio", "Gollus", "Héctor", "Jaime", "Nacho"]},
-  {nombre:"Alleno, Clement", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Van Boven, Luca", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Double, Paul", equipo:"JAY", cat:"Cazadores y especialistas", jugadores:["Eugenio"]},
-  {nombre:"Castrillo, Pablo", equipo:"MOV", cat:"Cazadores y especialistas", jugadores:["Carlos", "Eugenio", "Gollus", "Jaime", "Nacho"]},
-  {nombre:"Calzoni, Walter", equipo:"PQT", cat:"Gregarios", jugadores:["Nacho"]},
-  {nombre:"Camprubí, Marcel", equipo:"PQT", cat:"Gregarios", jugadores:["Eugenio", "Héctor", "Jaime"]},
-  {nombre:"Garofoli, Gianmarco", equipo:"SOQ", cat:"Gregarios", jugadores:[]},
-  {nombre:"Riccitello, Mathew", equipo:"DCT", cat:"Favoritos", jugadores:[]},
-  {nombre:"Onley, Oscar", equipo:"NCI", cat:"Máximos favoritos", jugadores:[]},
-  {nombre:"Gloag, Thomas", equipo:"PQT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Buchmann, Emanuel", equipo:"COF", cat:"Gregarios", jugadores:[]},
-  {nombre:"Dalby, Simon", equipo:"UXM", cat:"Gregarios", jugadores:[]},
-  {nombre:"van Bekkum, Darren", equipo:"XAT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Thompson, Reuben", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Widar, Jarno", equipo:"LOI", cat:"Escaladores", jugadores:["Gollus", "Héctor"]},
-  {nombre:"Houle, Hugo", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Marti, Pau", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Wilksch, Hannes", equipo:"TUD", cat:"Gregarios", jugadores:[]},
-  {nombre:"Garcia Pierna, Raul", equipo:"MOV", cat:"Cazadores y especialistas", jugadores:["Carlos"]},
-  {nombre:"Busatto, Francesco", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Pickering, Finlay", equipo:"JAY", cat:"Cazadores y especialistas", jugadores:[]},
-  {nombre:"Van Sintmaartensdijk, Roel", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Beloki, Markel", equipo:"EFE", cat:"Escaladores", jugadores:["Carlos", "Eugenio", "Jaime", "Nacho"]},
-  {nombre:"Rafferty, Darren", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Labrosse, Jordan", equipo:"DCT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Chumil Gonzalez, Sergio Geovani", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Uriarte Belzunegi, Diego", equipo:"EKP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Craps, Lars", equipo:"LOI", cat:"Gregarios", jugadores:[]},
-  {nombre:"Scotson, Callum", equipo:"DCT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Albanese, Vincenzo", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Mackellar, Alastair", equipo:"EFE", cat:"Gregarios", jugadores:[]},
-  {nombre:"Tuckwell, Luke", equipo:"RBH", cat:"Favoritos", jugadores:[]},
-  {nombre:"Macias, Cesar", equipo:"BBH", cat:"Gregarios", jugadores:[]},
-  {nombre:"Torres, Pablo", equipo:"UEX", cat:"Gregarios", jugadores:[]},
-  {nombre:"Martinez, Guillermo Juan", equipo:"TPP", cat:"Gregarios", jugadores:[]},
-  {nombre:"Van Tricht, Floris", equipo:"NSN", cat:"Gregarios", jugadores:[]},
-  {nombre:"Nordhagen, Jørgen", equipo:"TVL", cat:"Escaladores", jugadores:["Héctor", "Jaime"]},
-  {nombre:"Debruyne, Ramses", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Glivar, Gal", equipo:"APT", cat:"Gregarios", jugadores:[]},
-  {nombre:"Ermakov, Roman", equipo:"TBV", cat:"Gregarios", jugadores:["Nacho"]},
-  {nombre:"AULAR SANABRIA, Orluis Alberto", equipo:"MOV", cat:"Sprinters", jugadores:[]},
-  {nombre:"Vermeersch, Gianni", equipo:"RBH", cat:"Cazadores y especialistas", jugadores:[]},
-  {nombre:"Tjøtta, Martin", equipo:"UXM", cat:"Gregarios", jugadores:[]},
+  { nombre: "Pogačar, Tadej", equipo: "UEX", cat: "Máximos favoritos", jugadores: ["CARLOS","EUGENIO","GOLLUS","HÉCTOR","NACHO"] },
+  { nombre: "Hayter, Ethan", equipo: "SOQ", cat: "Cazadores y especialistas", jugadores: ["CARLOS","HÉCTOR","JAIME"] },
+  { nombre: "Tarling, Joshua", equipo: "NCI", cat: "Cazadores y especialistas", jugadores: [] },
+  { nombre: "Thornley, Callum", equipo: "RBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Laporte, Christophe", equipo: "TVL", cat: "Gregarios", jugadores: ["GOLLUS"] },
+  { nombre: "Bisiaux, Léo", equipo: "DCT", cat: "Escaladores", jugadores: ["EUGENIO"] },
+  { nombre: "Chamberlain, Oscar", equipo: "DCT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Van Aert, Wout", equipo: "TVL", cat: "A por el verde", jugadores: ["CARLOS","EUGENIO","GOLLUS","HÉCTOR","JAIME","NACHO"] },
+  { nombre: "Fisher-Black, Finn", equipo: "RBH", cat: "Cazadores y especialistas", jugadores: [] },
+  { nombre: "Kluckers, Arthur", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Romele, Alessandro", equipo: "XAT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Küng, Stefan", equipo: "TUD", cat: "Cazadores y especialistas", jugadores: ["CARLOS","EUGENIO","HÉCTOR"] },
+  { nombre: "Vine, Jay", equipo: "UEX", cat: "Favoritos", jugadores: ["CARLOS"] },
+  { nombre: "Oliveira, Ivo", equipo: "UEX", cat: "Gregarios", jugadores: [] },
+  { nombre: "Pedersen, Mads", equipo: "LTK", cat: "A por el verde", jugadores: [] },
+  { nombre: "Brennan, Matthew", equipo: "TVL", cat: "Sprinters", jugadores: ["CARLOS","EUGENIO","HÉCTOR"] },
+  { nombre: "De Pestel, Sander", equipo: "DCT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Almeida, Joao", equipo: "UEX", cat: "Máximos favoritos", jugadores: ["JAIME"] },
+  { nombre: "Romeo, Ivan", equipo: "MOV", cat: "Gregarios", jugadores: ["CARLOS"] },
+  { nombre: "Tiller, Rasmus", equipo: "UXM", cat: "Gregarios", jugadores: [] },
+  { nombre: "Aparicio, Mario", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Arcas, Jorge", equipo: "MOV", cat: "Gregarios", jugadores: ["NACHO"] },
+  { nombre: "Azparren, Xabier Mikel", equipo: "PQT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Barta, William", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Faura, José Luis", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Bennett, George", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Bernard, Julien", equipo: "LTK", cat: "Gregarios", jugadores: [] },
+  { nombre: "Berrade, Urko", equipo: "EKP", cat: "Gregarios", jugadores: ["EUGENIO","HÉCTOR","JAIME"] },
+  { nombre: "Berthet, Clement", equipo: "GFC", cat: "Escaladores", jugadores: ["NACHO"] },
+  { nombre: "Bilbao, Pello", equipo: "TBV", cat: "Escaladores", jugadores: [] },
+  { nombre: "Brenner, Marco", equipo: "TUD", cat: "Gregarios", jugadores: ["JAIME"] },
+  { nombre: "Buitrago, Santiago", equipo: "TBV", cat: "Favoritos", jugadores: ["EUGENIO","GOLLUS","JAIME"] },
+  { nombre: "Carapaz, Richard", equipo: "EFE", cat: "Máximos favoritos", jugadores: ["EUGENIO"] },
+  { nombre: "Langellotti, Victor", equipo: "NCI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Coquard, Bryan", equipo: "COF", cat: "Sprinters", jugadores: ["CARLOS","GOLLUS","HÉCTOR","NACHO"] },
+  { nombre: "Cort, Magnus", equipo: "UXM", cat: "Cazadores y especialistas", jugadores: ["GOLLUS"] },
+  { nombre: "Covi, Alessandro", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "De la Cruz, David", equipo: "PQT", cat: "Gregarios", jugadores: ["CARLOS","NACHO"] },
+  { nombre: "Dainese, Alberto", equipo: "SOQ", cat: "Sprinters", jugadores: ["EUGENIO","GOLLUS","JAIME"] },
+  { nombre: "Rouland, Louis", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "Díaz, José Manuel", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Elosegui, Iñigo", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Fedorov, Yevgeniy", equipo: "XAT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Gall, Felix", equipo: "DCT", cat: "Máximos favoritos", jugadores: ["GOLLUS","HÉCTOR","JAIME"] },
+  { nombre: "Groves, Kaden", equipo: "APT", cat: "Gregarios", jugadores: ["EUGENIO","GOLLUS","JAIME"] },
+  { nombre: "Hirt, Jan", equipo: "NSN", cat: "Gregarios", jugadores: ["CARLOS"] },
+  { nombre: "Hamilton, Lucas", equipo: "NCI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Haig, Jack", equipo: "NCI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Herrada, Jesus", equipo: "BBH", cat: "Gregarios", jugadores: ["GOLLUS"] },
+  { nombre: "Hofstetter, Hugo", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Wenzel, Mats", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Kämna, Lennard", equipo: "LTK", cat: "Gregarios", jugadores: [] },
+  { nombre: "Kruijswijk, Steven", equipo: "TVL", cat: "Gregarios", jugadores: [] },
+  { nombre: "Konrad, Patrick", equipo: "LTK", cat: "Gregarios", jugadores: [] },
+  { nombre: "Kuss, Sepp", equipo: "TVL", cat: "Favoritos", jugadores: ["CARLOS","HÉCTOR","NACHO"] },
+  { nombre: "Kron, Andreas", equipo: "UXM", cat: "Cazadores y especialistas", jugadores: ["JAIME"] },
+  { nombre: "Rodriguez Contreras, Juan Felipe", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Le Gac, Olivier", equipo: "GFC", cat: "Gregarios", jugadores: [] },
+  { nombre: "Leemreize, Gijs", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Leknessund, Andreas", equipo: "UXM", cat: "Gregarios", jugadores: ["EUGENIO","HÉCTOR","JAIME"] },
+  { nombre: "Landa, Mikel", equipo: "SOQ", cat: "Escaladores", jugadores: ["CARLOS","GOLLUS","NACHO"] },
+  { nombre: "Lutsenko, Alexey", equipo: "NSN", cat: "Gregarios", jugadores: ["CARLOS"] },
+  { nombre: "Madouas, Valentin", equipo: "GFC", cat: "Gregarios", jugadores: [] },
+  { nombre: "Mas, Enric", equipo: "MOV", cat: "Favoritos", jugadores: ["CARLOS","NACHO"] },
+  { nombre: "Meeus, Jordi", equipo: "RBH", cat: "Sprinters", jugadores: ["JAIME"] },
+  { nombre: "Molard, Rudy", equipo: "GFC", cat: "Gregarios", jugadores: ["CARLOS"] },
+  { nombre: "Mosca, Jacopo", equipo: "LTK", cat: "Gregarios", jugadores: [] },
+  { nombre: "Mühlberger, Gregor", equipo: "DCT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Moscon, Gianni", equipo: "RBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Norsgaard, Mathias", equipo: "LTK", cat: "Gregarios", jugadores: [] },
+  { nombre: "Novak, Domen", equipo: "UEX", cat: "Gregarios", jugadores: [] },
+  { nombre: "Dunbar, Edward", equipo: "PQT", cat: "Gregarios", jugadores: ["CARLOS","HÉCTOR","JAIME","NACHO"] },
+  { nombre: "Ourselin, Paul", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "González, David", equipo: "PQT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Vermaerke, Kevin", equipo: "UEX", cat: "Gregarios", jugadores: [] },
+  { nombre: "Renard, Alexis", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "Rota, Lorenzo", equipo: "LOI", cat: "Gregarios", jugadores: ["GOLLUS"] },
+  { nombre: "Rochas, Remy", equipo: "GFC", cat: "Gregarios", jugadores: [] },
+  { nombre: "Rodriguez Cano, Carlos", equipo: "NCI", cat: "Favoritos", jugadores: ["EUGENIO","GOLLUS","NACHO"] },
+  { nombre: "Roglič, Primož", equipo: "RBH", cat: "Máximos favoritos", jugadores: ["CARLOS","NACHO"] },
+  { nombre: "Roosen, Timo", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Samitier, Sergio", equipo: "COF", cat: "Gregarios", jugadores: ["GOLLUS"] },
+  { nombre: "Ruiz, Ibon", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Schultz, Nick", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Fortunato, Lorenzo", equipo: "XAT", cat: "Escaladores", jugadores: ["CARLOS","GOLLUS"] },
+  { nombre: "Shaw, James", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Skjelmose Jensen, Mattias", equipo: "LTK", cat: "Favoritos", jugadores: ["EUGENIO","GOLLUS","HÉCTOR","JAIME"] },
+  { nombre: "Sivakov, Pavel", equipo: "UEX", cat: "Gregarios", jugadores: [] },
+  { nombre: "Tejada, Harold", equipo: "XAT", cat: "Escaladores", jugadores: ["JAIME"] },
+  { nombre: "Thalmann, Roland", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Tulett, Ben", equipo: "TVL", cat: "Favoritos", jugadores: ["HÉCTOR","JAIME"] },
+  { nombre: "Kretschy, Moritz", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Valter, Attila", equipo: "TBV", cat: "Gregarios", jugadores: [] },
+  { nombre: "Vansevenant, Mauri", equipo: "SOQ", cat: "Gregarios", jugadores: [] },
+  { nombre: "Wandahl, Frederik", equipo: "RBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Warbasse, Larry", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Zana, Filippo", equipo: "SOQ", cat: "Cazadores y especialistas", jugadores: ["GOLLUS","NACHO"] },
+  { nombre: "Steinhauser, Georg", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Turner, Ben", equipo: "NCI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Vader, Milan", equipo: "PQT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Brustenga, Marc", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Laurance, Axel", equipo: "NCI", cat: "Cazadores y especialistas", jugadores: ["HÉCTOR"] },
+  { nombre: "Braet, Vito", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Dversnes, Fredrik", equipo: "UXM", cat: "Gregarios", jugadores: [] },
+  { nombre: "Cobo Cayon, Ivan", equipo: "EKP", cat: "Gregarios", jugadores: ["NACHO"] },
+  { nombre: "Hellemose, Asbjorn", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "Uijtdebroeks, Cian", equipo: "MOV", cat: "Favoritos", jugadores: [] },
+  { nombre: "Miquel, Pau", equipo: "TBV", cat: "Gregarios", jugadores: ["EUGENIO","GOLLUS","HÉCTOR"] },
+  { nombre: "Johannessen, Tobias Haaland", equipo: "UXM", cat: "Favoritos", jugadores: [] },
+  { nombre: "Hamilton, Chris", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Gogl, Michael", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Mulubrhan, Henok", equipo: "XAT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Govekar, Matevž", equipo: "TBV", cat: "Gregarios", jugadores: [] },
+  { nombre: "Paret-Peintre, Valentin", equipo: "SOQ", cat: "Escaladores", jugadores: ["EUGENIO","HÉCTOR"] },
+  { nombre: "Weiss, Fabian", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Fernandez Rodriguez, Sinuhe", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "De Vylder, Lindsay", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "McKenzie, Hamish", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "Sentjens, Sente", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Van den Bossche, Fabio", equipo: "SOQ", cat: "Gregarios", jugadores: [] },
+  { nombre: "Omrzel, Jakob", equipo: "TBV", cat: "Gregarios", jugadores: [] },
+  { nombre: "Martin-Guyonnet, Guillaume", equipo: "GFC", cat: "Escaladores", jugadores: [] },
+  { nombre: "Svestad-Bårdseng, Embret", equipo: "NCI", cat: "Gregarios", jugadores: [] },
+  { nombre: "de Jong, Timo", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Gaffuri, Mattia", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Haquin, Henri-Francois", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Peace, Oliver", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Armirail, Bruno", equipo: "TVL", cat: "Cazadores y especialistas", jugadores: [] },
+  { nombre: "Canal, Carlos", equipo: "MOV", cat: "Gregarios", jugadores: [] },
+  { nombre: "Paasschens, Mathijs", equipo: "TBV", cat: "Gregarios", jugadores: [] },
+  { nombre: "Moniquet, Sylvain", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "Bouwman, Koen", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "Sosa, Iván Ramiro", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "De Schuyteneer, Stefen", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Sütterlin, Jasha", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "Rodriguez, Cristian", equipo: "XAT", cat: "Gregarios", jugadores: ["EUGENIO","HÉCTOR"] },
+  { nombre: "Kirsch, Alex", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "Tronchon, Bastien", equipo: "GFC", cat: "Gregarios", jugadores: [] },
+  { nombre: "Paleni, Enzo", equipo: "GFC", cat: "Gregarios", jugadores: [] },
+  { nombre: "Porter, Rudy", equipo: "JAY", cat: "Gregarios", jugadores: [] },
+  { nombre: "Nys, Thibau", equipo: "LTK", cat: "Cazadores y especialistas", jugadores: ["EUGENIO","GOLLUS","HÉCTOR","JAIME","NACHO"] },
+  { nombre: "Alleno, Clement", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Van Boven, Luca", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Double, Paul", equipo: "JAY", cat: "Cazadores y especialistas", jugadores: ["EUGENIO"] },
+  { nombre: "Castrillo, Pablo", equipo: "MOV", cat: "Cazadores y especialistas", jugadores: ["CARLOS","EUGENIO","GOLLUS","JAIME","NACHO"] },
+  { nombre: "Calzoni, Walter", equipo: "PQT", cat: "Gregarios", jugadores: ["NACHO"] },
+  { nombre: "Camprubí, Marcel", equipo: "PQT", cat: "Gregarios", jugadores: ["EUGENIO","HÉCTOR","JAIME"] },
+  { nombre: "Garofoli, Gianmarco", equipo: "SOQ", cat: "Gregarios", jugadores: [] },
+  { nombre: "Riccitello, Mathew", equipo: "DCT", cat: "Favoritos", jugadores: [] },
+  { nombre: "Onley, Oscar", equipo: "NCI", cat: "Máximos favoritos", jugadores: [] },
+  { nombre: "Gloag, Thomas", equipo: "PQT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Buchmann, Emanuel", equipo: "COF", cat: "Gregarios", jugadores: [] },
+  { nombre: "Dalby, Simon", equipo: "UXM", cat: "Gregarios", jugadores: [] },
+  { nombre: "van Bekkum, Darren", equipo: "XAT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Thompson, Reuben", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Widar, Jarno", equipo: "LOI", cat: "Escaladores", jugadores: ["GOLLUS","HÉCTOR"] },
+  { nombre: "Houle, Hugo", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Marti, Pau", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Wilksch, Hannes", equipo: "TUD", cat: "Gregarios", jugadores: [] },
+  { nombre: "Garcia Pierna, Raul", equipo: "MOV", cat: "Cazadores y especialistas", jugadores: ["CARLOS"] },
+  { nombre: "Busatto, Francesco", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Pickering, Finlay", equipo: "JAY", cat: "Cazadores y especialistas", jugadores: [] },
+  { nombre: "Van Sintmaartensdijk, Roel", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Beloki, Markel", equipo: "EFE", cat: "Escaladores", jugadores: ["CARLOS","EUGENIO","JAIME","NACHO"] },
+  { nombre: "Rafferty, Darren", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Labrosse, Jordan", equipo: "DCT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Chumil Gonzalez, Sergio Geovani", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Uriarte Belzunegi, Diego", equipo: "EKP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Craps, Lars", equipo: "LOI", cat: "Gregarios", jugadores: [] },
+  { nombre: "Scotson, Callum", equipo: "DCT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Albanese, Vincenzo", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Mackellar, Alastair", equipo: "EFE", cat: "Gregarios", jugadores: [] },
+  { nombre: "Tuckwell, Luke", equipo: "RBH", cat: "Favoritos", jugadores: [] },
+  { nombre: "Macias, Cesar", equipo: "BBH", cat: "Gregarios", jugadores: [] },
+  { nombre: "Torres, Pablo", equipo: "UEX", cat: "Gregarios", jugadores: [] },
+  { nombre: "Martinez, Guillermo Juan", equipo: "TPP", cat: "Gregarios", jugadores: [] },
+  { nombre: "Van Tricht, Floris", equipo: "NSN", cat: "Gregarios", jugadores: [] },
+  { nombre: "Nordhagen, Jørgen", equipo: "TVL", cat: "Escaladores", jugadores: ["HÉCTOR","JAIME"] },
+  { nombre: "Debruyne, Ramses", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Glivar, Gal", equipo: "APT", cat: "Gregarios", jugadores: [] },
+  { nombre: "Ermakov, Roman", equipo: "TBV", cat: "Gregarios", jugadores: ["NACHO"] },
+  { nombre: "AULAR SANABRIA, Orluis Alberto", equipo: "MOV", cat: "Sprinters", jugadores: [] },
+  { nombre: "Vermeersch, Gianni", equipo: "RBH", cat: "Cazadores y especialistas", jugadores: [] },
+  { nombre: "Tjøtta, Martin", equipo: "UXM", cat: "Gregarios", jugadores: [] },
 ];
 /*__MARCA_CICLISTAS_FIN__*/
 
@@ -2325,180 +2317,1016 @@ JUGADORES_CONFIG.forEach(function(j, i){
 /* Resultados precargados — vacío en la plantilla */
 /*__MARCA_RESULTADOS_INICIO__*/
 const RESULTADOS_PRECARGADOS = {
-  1: [
-    {ciclista:"Pogačar, Tadej", posicion:1, puntosTropela:155},
-    {ciclista:"Hayter, Ethan", posicion:2, puntosTropela:95},
-    {ciclista:"Tarling, Joshua", posicion:3, puntosTropela:80},
-    {ciclista:"Thornley, Callum", posicion:4, puntosTropela:65},
-    {ciclista:"Laporte, Christophe", posicion:5, puntosTropela:52},
-    {ciclista:"Bisiaux, Léo", posicion:6, puntosTropela:41},
-    {ciclista:"Chamberlain, Oscar", posicion:7, puntosTropela:30},
-    {ciclista:"Van Aert, Wout", posicion:8, puntosTropela:25},
-    {ciclista:"Fisher-Black, Finn", posicion:9, puntosTropela:20},
-    {ciclista:"Kluckers, Arthur", posicion:10, puntosTropela:17},
-    {ciclista:"Romele, Alessandro", posicion:11, puntosTropela:15},
-    {ciclista:"Küng, Stefan", posicion:12, puntosTropela:13},
-    {ciclista:"Vine, Jay", posicion:13, puntosTropela:11},
-    {ciclista:"Oliveira, Ivo", posicion:14, puntosTropela:9},
-    {ciclista:"Pedersen, Mads", posicion:15, puntosTropela:7},
-    {ciclista:"Brennan, Matthew", posicion:16, puntosTropela:5},
-    {ciclista:"De Pestel, Sander", posicion:17, puntosTropela:4},
-    {ciclista:"Almeida, Joao", posicion:18, puntosTropela:3},
-    {ciclista:"Romeo, Ivan", posicion:19, puntosTropela:2},
-    {ciclista:"Tiller, Rasmus", posicion:20, puntosTropela:1}
+  "1": [
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 1,
+      "puntosTropela": 155
+    },
+    {
+      "ciclista": "Hayter, Ethan",
+      "posicion": 2,
+      "puntosTropela": 95
+    },
+    {
+      "ciclista": "Tarling, Joshua",
+      "posicion": 3,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Thornley, Callum",
+      "posicion": 4,
+      "puntosTropela": 65
+    },
+    {
+      "ciclista": "Laporte, Christophe",
+      "posicion": 5,
+      "puntosTropela": 52
+    },
+    {
+      "ciclista": "Bisiaux, Léo",
+      "posicion": 6,
+      "puntosTropela": 41
+    },
+    {
+      "ciclista": "Chamberlain, Oscar",
+      "posicion": 7,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Van Aert, Wout",
+      "posicion": 8,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "Fisher-Black, Finn",
+      "posicion": 9,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Kluckers, Arthur",
+      "posicion": 10,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Romele, Alessandro",
+      "posicion": 11,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Küng, Stefan",
+      "posicion": 12,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Vine, Jay",
+      "posicion": 13,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Oliveira, Ivo",
+      "posicion": 14,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Pedersen, Mads",
+      "posicion": 15,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Brennan, Matthew",
+      "posicion": 16,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "De Pestel, Sander",
+      "posicion": 17,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Almeida, Joao",
+      "posicion": 18,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Romeo, Ivan",
+      "posicion": 19,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Tiller, Rasmus",
+      "posicion": 20,
+      "puntosTropela": 1
+    }
   ],
-  2: [
-    {ciclista:"Brennan, Matthew", posicion:1, puntosTropela:135},
-    {ciclista:"Pogačar, Tadej", posicion:2, puntosTropela:100},
-    {ciclista:"Miquel, Pau", posicion:3, puntosTropela:80},
-    {ciclista:"Pedersen, Mads", posicion:4, puntosTropela:60},
-    {ciclista:"Hofstetter, Hugo", posicion:5, puntosTropela:50},
-    {ciclista:"Johannessen, Tobias Haaland", posicion:6, puntosTropela:40},
-    {ciclista:"Fisher-Black, Finn", posicion:7, puntosTropela:32},
-    {ciclista:"Laurance, Axel", posicion:8, puntosTropela:25},
-    {ciclista:"Onley, Oscar", posicion:9, puntosTropela:20},
-    {ciclista:"Bisiaux, Léo", posicion:10, puntosTropela:18},
-    {ciclista:"AULAR SANABRIA, Orluis Alberto", posicion:11, puntosTropela:17},
-    {ciclista:"Van Aert, Wout", posicion:12, puntosTropela:15},
-    {ciclista:"Tulett, Ben", posicion:13, puntosTropela:15},
-    {ciclista:"Braet, Vito", posicion:14, puntosTropela:11},
-    {ciclista:"González, David", posicion:15, puntosTropela:9},
-    {ciclista:"Coquard, Bryan", posicion:16, puntosTropela:7},
-    {ciclista:"Vader, Milan", posicion:17, puntosTropela:5},
-    {ciclista:"Van den Bossche, Fabio", posicion:18, puntosTropela:4},
-    {ciclista:"Debruyne, Ramses", posicion:19, puntosTropela:3},
-    {ciclista:"Tejada, Harold", posicion:20, puntosTropela:2},
-    {ciclista:"Brenner, Marco", posicion:21, puntosTropela:1},
-    {ciclista:"Küng, Stefan", posicion:22, puntosTropela:1}
+  "2": [
+    {
+      "ciclista": "Brennan, Matthew",
+      "posicion": 1,
+      "puntosTropela": 135
+    },
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 2,
+      "puntosTropela": 100
+    },
+    {
+      "ciclista": "Miquel, Pau",
+      "posicion": 3,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Pedersen, Mads",
+      "posicion": 4,
+      "puntosTropela": 60
+    },
+    {
+      "ciclista": "Hofstetter, Hugo",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Johannessen, Tobias Haaland",
+      "posicion": 6,
+      "puntosTropela": 40
+    },
+    {
+      "ciclista": "Fisher-Black, Finn",
+      "posicion": 7,
+      "puntosTropela": 32
+    },
+    {
+      "ciclista": "Laurance, Axel",
+      "posicion": 8,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 9,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Bisiaux, Léo",
+      "posicion": 10,
+      "puntosTropela": 18
+    },
+    {
+      "ciclista": "AULAR SANABRIA, Orluis Alberto",
+      "posicion": 11,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Van Aert, Wout",
+      "posicion": 12,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Tulett, Ben",
+      "posicion": 13,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Braet, Vito",
+      "posicion": 14,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "González, David",
+      "posicion": 15,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Coquard, Bryan",
+      "posicion": 16,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Vader, Milan",
+      "posicion": 17,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Van den Bossche, Fabio",
+      "posicion": 18,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Debruyne, Ramses",
+      "posicion": 19,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Tejada, Harold",
+      "posicion": 20,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Brenner, Marco",
+      "posicion": 21,
+      "puntosTropela": 1
+    },
+    {
+      "ciclista": "Küng, Stefan",
+      "posicion": 22,
+      "puntosTropela": 1
+    }
   ],
-  4: [
-    {ciclista:"Pogačar, Tadej", posicion:1, puntosTropela:155},
-    {ciclista:"Widar, Jarno", posicion:2, puntosTropela:80},
-    {ciclista:"Gall, Felix", posicion:3, puntosTropela:70},
-    {ciclista:"Onley, Oscar", posicion:4, puntosTropela:62},
-    {ciclista:"Kuss, Sepp", posicion:5, puntosTropela:55},
-    {ciclista:"Mas, Enric", posicion:6, puntosTropela:50},
-    {ciclista:"Roglič, Primož", posicion:7, puntosTropela:45},
-    {ciclista:"Carapaz, Richard", posicion:8, puntosTropela:26},
-    {ciclista:"Skjelmose Jensen, Mattias", posicion:9, puntosTropela:20},
-    {ciclista:"Mühlberger, Gregor", posicion:10, puntosTropela:17},
-    {ciclista:"Vine, Jay", posicion:11, puntosTropela:15},
-    {ciclista:"Debruyne, Ramses", posicion:12, puntosTropela:13},
-    {ciclista:"Tejada, Harold", posicion:13, puntosTropela:11},
-    {ciclista:"Torres, Pablo", posicion:14, puntosTropela:9},
-    {ciclista:"Brenner, Marco", posicion:15, puntosTropela:7},
-    {ciclista:"Berthet, Clement", posicion:16, puntosTropela:5},
-    {ciclista:"Hirt, Jan", posicion:17, puntosTropela:4},
-    {ciclista:"Ruiz, Ibon", posicion:18, puntosTropela:3},
-    {ciclista:"Tulett, Ben", posicion:19, puntosTropela:2},
-    {ciclista:"Omrzel, Jakob", posicion:20, puntosTropela:1}
+  "3": [
+    {
+      "ciclista": "Anulada",
+      "posicion": 1,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 2,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 3,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 4,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 5,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 6,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 7,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 8,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 9,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 10,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 11,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 12,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 13,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 14,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 15,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 16,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 17,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 18,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 19,
+      "puntosTropela": null
+    },
+    {
+      "ciclista": "Anulada",
+      "posicion": 20,
+      "puntosTropela": null
+    }
   ],
-  5: [
-    {ciclista:"Brennan, Matthew", posicion:1, puntosTropela:125},
-    {ciclista:"Meeus, Jordi", posicion:2, puntosTropela:80},
-    {ciclista:"Albanese, Vincenzo", posicion:3, puntosTropela:70},
-    {ciclista:"Romele, Alessandro", posicion:4, puntosTropela:60},
-    {ciclista:"Laurance, Axel", posicion:5, puntosTropela:50},
-    {ciclista:"Laporte, Christophe", posicion:6, puntosTropela:40},
-    {ciclista:"Pogačar, Tadej", posicion:7, puntosTropela:30},
-    {ciclista:"Dainese, Alberto", posicion:8, puntosTropela:30},
-    {ciclista:"Braet, Vito", posicion:9, puntosTropela:25},
-    {ciclista:"González, David", posicion:10, puntosTropela:20},
-    {ciclista:"Van Aert, Wout", posicion:11, puntosTropela:17},
-    {ciclista:"Roglič, Primož", posicion:12, puntosTropela:15},
-    {ciclista:"Miquel, Pau", posicion:13, puntosTropela:15},
-    {ciclista:"Tronchon, Bastien", posicion:14, puntosTropela:13},
-    {ciclista:"Hofstetter, Hugo", posicion:15, puntosTropela:11},
-    {ciclista:"Mas, Enric", posicion:16, puntosTropela:10},
-    {ciclista:"Tiller, Rasmus", posicion:17, puntosTropela:9},
-    {ciclista:"Mulubrhan, Henok", posicion:18, puntosTropela:7},
-    {ciclista:"Kuss, Sepp", posicion:19, puntosTropela:5},
-    {ciclista:"Coquard, Bryan", posicion:20, puntosTropela:5},
-    {ciclista:"Camprubí, Marcel", posicion:21, puntosTropela:4},
-    {ciclista:"Covi, Alessandro", posicion:22, puntosTropela:3},
-    {ciclista:"Onley, Oscar", posicion:23, puntosTropela:2},
-    {ciclista:"Alleno, Clement", posicion:24, puntosTropela:2},
-    {ciclista:"Haquin, Henri-Francois", posicion:25, puntosTropela:1},
-    {ciclista:"Carapaz, Richard", posicion:26, puntosTropela:1}
+  "4": [
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 1,
+      "puntosTropela": 155
+    },
+    {
+      "ciclista": "Widar, Jarno",
+      "posicion": 2,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Gall, Felix",
+      "posicion": 3,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 4,
+      "puntosTropela": 62
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 5,
+      "puntosTropela": 55
+    },
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 6,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 7,
+      "puntosTropela": 45
+    },
+    {
+      "ciclista": "Carapaz, Richard",
+      "posicion": 8,
+      "puntosTropela": 26
+    },
+    {
+      "ciclista": "Skjelmose Jensen, Mattias",
+      "posicion": 9,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Mühlberger, Gregor",
+      "posicion": 10,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Vine, Jay",
+      "posicion": 11,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Debruyne, Ramses",
+      "posicion": 12,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Tejada, Harold",
+      "posicion": 13,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Torres, Pablo",
+      "posicion": 14,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Brenner, Marco",
+      "posicion": 15,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Berthet, Clement",
+      "posicion": 16,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Hirt, Jan",
+      "posicion": 17,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Ruiz, Ibon",
+      "posicion": 18,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Tulett, Ben",
+      "posicion": 19,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Omrzel, Jakob",
+      "posicion": 20,
+      "puntosTropela": 1
+    }
   ],
-  6: [
-    {ciclista:"Pogačar, Tadej", posicion:1, puntosTropela:155},
-    {ciclista:"Mas, Enric", posicion:2, puntosTropela:95},
-    {ciclista:"Debruyne, Ramses", posicion:3, puntosTropela:70},
-    {ciclista:"Carapaz, Richard", posicion:4, puntosTropela:65},
-    {ciclista:"Tejada, Harold", posicion:5, puntosTropela:50},
-    {ciclista:"Gall, Felix", posicion:6, puntosTropela:42},
-    {ciclista:"Roglič, Primož", posicion:7, puntosTropela:40},
-    {ciclista:"Rodriguez, Cristian", posicion:8, puntosTropela:25},
-    {ciclista:"Berthet, Clement", posicion:9, puntosTropela:20},
-    {ciclista:"Skjelmose Jensen, Mattias", posicion:10, puntosTropela:17},
-    {ciclista:"Kuss, Sepp", posicion:11, puntosTropela:16},
-    {ciclista:"Onley, Oscar", posicion:12, puntosTropela:13},
-    {ciclista:"Kron, Andreas", posicion:13, puntosTropela:11},
-    {ciclista:"Camprubí, Marcel", posicion:14, puntosTropela:9},
-    {ciclista:"Konrad, Patrick", posicion:15, puntosTropela:7},
-    {ciclista:"Díaz, José Manuel", posicion:16, puntosTropela:5},
-    {ciclista:"Garofoli, Gianmarco", posicion:17, puntosTropela:4},
-    {ciclista:"Omrzel, Jakob", posicion:18, puntosTropela:3},
-    {ciclista:"Buitrago, Santiago", posicion:19, puntosTropela:2},
-    {ciclista:"Gaffuri, Mattia", posicion:20, puntosTropela:1}
+  "5": [
+    {
+      "ciclista": "Brennan, Matthew",
+      "posicion": 1,
+      "puntosTropela": 125
+    },
+    {
+      "ciclista": "Meeus, Jordi",
+      "posicion": 2,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Albanese, Vincenzo",
+      "posicion": 3,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Romele, Alessandro",
+      "posicion": 4,
+      "puntosTropela": 60
+    },
+    {
+      "ciclista": "Laurance, Axel",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Laporte, Christophe",
+      "posicion": 6,
+      "puntosTropela": 40
+    },
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 7,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Dainese, Alberto",
+      "posicion": 8,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Braet, Vito",
+      "posicion": 9,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "González, David",
+      "posicion": 10,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Van Aert, Wout",
+      "posicion": 11,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 12,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Miquel, Pau",
+      "posicion": 13,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Tronchon, Bastien",
+      "posicion": 14,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Hofstetter, Hugo",
+      "posicion": 15,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 16,
+      "puntosTropela": 10
+    },
+    {
+      "ciclista": "Tiller, Rasmus",
+      "posicion": 17,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Mulubrhan, Henok",
+      "posicion": 18,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 19,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Coquard, Bryan",
+      "posicion": 20,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Camprubí, Marcel",
+      "posicion": 21,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Covi, Alessandro",
+      "posicion": 22,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 23,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Alleno, Clement",
+      "posicion": 24,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Haquin, Henri-Francois",
+      "posicion": 25,
+      "puntosTropela": 1
+    },
+    {
+      "ciclista": "Carapaz, Richard",
+      "posicion": 26,
+      "puntosTropela": 1
+    }
   ],
-  7: [
-    {ciclista:"Leknessund, Andreas", posicion:1, puntosTropela:125},
-    {ciclista:"Johannessen, Tobias Haaland", posicion:2, puntosTropela:80},
-    {ciclista:"Van Aert, Wout", posicion:3, puntosTropela:70},
-    {ciclista:"Omrzel, Jakob", posicion:4, puntosTropela:60},
-    {ciclista:"Rodriguez Contreras, Juan Felipe", posicion:5, puntosTropela:50},
-    {ciclista:"Sosa, Iván Ramiro", posicion:6, puntosTropela:40},
-    {ciclista:"Pogačar, Tadej", posicion:7, puntosTropela:32},
-    {ciclista:"Lutsenko, Alexey", posicion:8, puntosTropela:30},
-    {ciclista:"Dunbar, Edward", posicion:9, puntosTropela:25},
-    {ciclista:"Bisiaux, Léo", posicion:10, puntosTropela:20},
-    {ciclista:"Garcia Pierna, Raul", posicion:11, puntosTropela:17},
-    {ciclista:"Paret-Peintre, Valentin", posicion:12, puntosTropela:15},
-    {ciclista:"Mas, Enric", posicion:13, puntosTropela:15},
-    {ciclista:"Zana, Filippo", posicion:14, puntosTropela:13},
-    {ciclista:"Warbasse, Larry", posicion:15, puntosTropela:11},
-    {ciclista:"Roglič, Primož", posicion:16, puntosTropela:10},
-    {ciclista:"Martin-Guyonnet, Guillaume", posicion:17, puntosTropela:9},
-    {ciclista:"Samitier, Sergio", posicion:18, puntosTropela:7},
-    {ciclista:"Gall, Felix", posicion:19, puntosTropela:6},
-    {ciclista:"Pickering, Finlay", posicion:20, puntosTropela:5},
-    {ciclista:"Bouwman, Koen", posicion:21, puntosTropela:4},
-    {ciclista:"Wenzel, Mats", posicion:22, puntosTropela:3},
-    {ciclista:"Kuss, Sepp", posicion:23, puntosTropela:2},
-    {ciclista:"Onley, Oscar", posicion:24, puntosTropela:1}
+  "6": [
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 1,
+      "puntosTropela": 155
+    },
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 2,
+      "puntosTropela": 95
+    },
+    {
+      "ciclista": "Debruyne, Ramses",
+      "posicion": 3,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Carapaz, Richard",
+      "posicion": 4,
+      "puntosTropela": 65
+    },
+    {
+      "ciclista": "Tejada, Harold",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Gall, Felix",
+      "posicion": 6,
+      "puntosTropela": 42
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 7,
+      "puntosTropela": 40
+    },
+    {
+      "ciclista": "Rodriguez, Cristian",
+      "posicion": 8,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "Berthet, Clement",
+      "posicion": 9,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Skjelmose Jensen, Mattias",
+      "posicion": 10,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 11,
+      "puntosTropela": 16
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 12,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Kron, Andreas",
+      "posicion": 13,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Camprubí, Marcel",
+      "posicion": 14,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Konrad, Patrick",
+      "posicion": 15,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Díaz, José Manuel",
+      "posicion": 16,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Garofoli, Gianmarco",
+      "posicion": 17,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Omrzel, Jakob",
+      "posicion": 18,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Buitrago, Santiago",
+      "posicion": 19,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Gaffuri, Mattia",
+      "posicion": 20,
+      "puntosTropela": 1
+    }
   ],
-  8: [
-    {ciclista:"Coquard, Bryan", posicion:1, puntosTropela:125},
-    {ciclista:"Pedersen, Mads", posicion:2, puntosTropela:80},
-    {ciclista:"Meeus, Jordi", posicion:3, puntosTropela:70},
-    {ciclista:"Turner, Ben", posicion:4, puntosTropela:60},
-    {ciclista:"Labrosse, Jordan", posicion:5, puntosTropela:50},
-    {ciclista:"Romele, Alessandro", posicion:6, puntosTropela:40},
-    {ciclista:"Tronchon, Bastien", posicion:7, puntosTropela:30},
-    {ciclista:"Mas, Enric", posicion:8, puntosTropela:30},
-    {ciclista:"Hofstetter, Hugo", posicion:9, puntosTropela:25},
-    {ciclista:"AULAR SANABRIA, Orluis Alberto", posicion:10, puntosTropela:20},
-    {ciclista:"Brennan, Matthew", posicion:11, puntosTropela:17},
-    {ciclista:"Braet, Vito", posicion:12, puntosTropela:15},
-    {ciclista:"Roglič, Primož", posicion:13, puntosTropela:15},
-    {ciclista:"Govekar, Matevž", posicion:14, puntosTropela:13},
-    {ciclista:"Covi, Alessandro", posicion:15, puntosTropela:11},
-    {ciclista:"Gall, Felix", posicion:16, puntosTropela:10},
-    {ciclista:"Mulubrhan, Henok", posicion:17, puntosTropela:9},
-    {ciclista:"de Jong, Timo", posicion:18, puntosTropela:7},
-    {ciclista:"Kuss, Sepp", posicion:19, puntosTropela:5},
-    {ciclista:"Brustenga, Marc", posicion:20, puntosTropela:5},
-    {ciclista:"Laporte, Christophe", posicion:21, puntosTropela:4},
-    {ciclista:"Roosen, Timo", posicion:22, puntosTropela:3},
-    {ciclista:"Fisher-Black, Finn", posicion:23, puntosTropela:2},
-    {ciclista:"Onley, Oscar", posicion:24, puntosTropela:2},
-    {ciclista:"Renard, Alexis", posicion:25, puntosTropela:1},
-    {ciclista:"Carapaz, Richard", posicion:26, puntosTropela:1}
+  "7": [
+    {
+      "ciclista": "Leknessund, Andreas",
+      "posicion": 1,
+      "puntosTropela": 125
+    },
+    {
+      "ciclista": "Johannessen, Tobias Haaland",
+      "posicion": 2,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Van Aert, Wout",
+      "posicion": 3,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Omrzel, Jakob",
+      "posicion": 4,
+      "puntosTropela": 60
+    },
+    {
+      "ciclista": "Rodriguez Contreras, Juan Felipe",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Sosa, Iván Ramiro",
+      "posicion": 6,
+      "puntosTropela": 40
+    },
+    {
+      "ciclista": "Pogačar, Tadej",
+      "posicion": 7,
+      "puntosTropela": 32
+    },
+    {
+      "ciclista": "Lutsenko, Alexey",
+      "posicion": 8,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Dunbar, Edward",
+      "posicion": 9,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "Bisiaux, Léo",
+      "posicion": 10,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Garcia Pierna, Raul",
+      "posicion": 11,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Paret-Peintre, Valentin",
+      "posicion": 12,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 13,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Zana, Filippo",
+      "posicion": 14,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Warbasse, Larry",
+      "posicion": 15,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 16,
+      "puntosTropela": 10
+    },
+    {
+      "ciclista": "Martin-Guyonnet, Guillaume",
+      "posicion": 17,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Samitier, Sergio",
+      "posicion": 18,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Gall, Felix",
+      "posicion": 19,
+      "puntosTropela": 6
+    },
+    {
+      "ciclista": "Pickering, Finlay",
+      "posicion": 20,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Bouwman, Koen",
+      "posicion": 21,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Wenzel, Mats",
+      "posicion": 22,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 23,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 24,
+      "puntosTropela": 1
+    }
   ],
+  "8": [
+    {
+      "ciclista": "Coquard, Bryan",
+      "posicion": 1,
+      "puntosTropela": 125
+    },
+    {
+      "ciclista": "Pedersen, Mads",
+      "posicion": 2,
+      "puntosTropela": 80
+    },
+    {
+      "ciclista": "Meeus, Jordi",
+      "posicion": 3,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Turner, Ben",
+      "posicion": 4,
+      "puntosTropela": 60
+    },
+    {
+      "ciclista": "Labrosse, Jordan",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Romele, Alessandro",
+      "posicion": 6,
+      "puntosTropela": 40
+    },
+    {
+      "ciclista": "Tronchon, Bastien",
+      "posicion": 7,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 8,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Hofstetter, Hugo",
+      "posicion": 9,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "AULAR SANABRIA, Orluis Alberto",
+      "posicion": 10,
+      "puntosTropela": 20
+    },
+    {
+      "ciclista": "Brennan, Matthew",
+      "posicion": 11,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Braet, Vito",
+      "posicion": 12,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 13,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Govekar, Matevž",
+      "posicion": 14,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Covi, Alessandro",
+      "posicion": 15,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Gall, Felix",
+      "posicion": 16,
+      "puntosTropela": 10
+    },
+    {
+      "ciclista": "Mulubrhan, Henok",
+      "posicion": 17,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "de Jong, Timo",
+      "posicion": 18,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 19,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Brustenga, Marc",
+      "posicion": 20,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Laporte, Christophe",
+      "posicion": 21,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Roosen, Timo",
+      "posicion": 22,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Fisher-Black, Finn",
+      "posicion": 23,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 24,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Renard, Alexis",
+      "posicion": 25,
+      "puntosTropela": 1
+    },
+    {
+      "ciclista": "Carapaz, Richard",
+      "posicion": 26,
+      "puntosTropela": 1
+    }
+  ],
+  "9": [
+    {
+      "ciclista": "Mas, Enric",
+      "posicion": 1,
+      "puntosTropela": 155
+    },
+    {
+      "ciclista": "Onley, Oscar",
+      "posicion": 2,
+      "puntosTropela": 85
+    },
+    {
+      "ciclista": "Roglič, Primož",
+      "posicion": 3,
+      "puntosTropela": 85
+    },
+    {
+      "ciclista": "Gall, Felix",
+      "posicion": 4,
+      "puntosTropela": 70
+    },
+    {
+      "ciclista": "Rodriguez, Cristian",
+      "posicion": 5,
+      "puntosTropela": 50
+    },
+    {
+      "ciclista": "Skjelmose Jensen, Mattias",
+      "posicion": 6,
+      "puntosTropela": 41
+    },
+    {
+      "ciclista": "Widar, Jarno",
+      "posicion": 7,
+      "puntosTropela": 30
+    },
+    {
+      "ciclista": "Tejada, Harold",
+      "posicion": 8,
+      "puntosTropela": 25
+    },
+    {
+      "ciclista": "Carapaz, Richard",
+      "posicion": 9,
+      "puntosTropela": 22
+    },
+    {
+      "ciclista": "Buitrago, Santiago",
+      "posicion": 10,
+      "puntosTropela": 17
+    },
+    {
+      "ciclista": "Kuss, Sepp",
+      "posicion": 11,
+      "puntosTropela": 15
+    },
+    {
+      "ciclista": "Mühlberger, Gregor",
+      "posicion": 12,
+      "puntosTropela": 13
+    },
+    {
+      "ciclista": "Debruyne, Ramses",
+      "posicion": 13,
+      "puntosTropela": 11
+    },
+    {
+      "ciclista": "Berthet, Clement",
+      "posicion": 14,
+      "puntosTropela": 9
+    },
+    {
+      "ciclista": "Omrzel, Jakob",
+      "posicion": 15,
+      "puntosTropela": 7
+    },
+    {
+      "ciclista": "Riccitello, Mathew",
+      "posicion": 16,
+      "puntosTropela": 5
+    },
+    {
+      "ciclista": "Zana, Filippo",
+      "posicion": 17,
+      "puntosTropela": 4
+    },
+    {
+      "ciclista": "Rodriguez Contreras, Juan Felipe",
+      "posicion": 18,
+      "puntosTropela": 3
+    },
+    {
+      "ciclista": "Leemreize, Gijs",
+      "posicion": 19,
+      "puntosTropela": 2
+    },
+    {
+      "ciclista": "Sivakov, Pavel",
+      "posicion": 20,
+      "puntosTropela": 1
+    }
+  ]
 };
-const ABANDONOS_PRECARGADOS = ["Beloki, Markel", "Chumil Gonzalez, Sergio Geovani", "Kirsch, Alex", "Pogačar, Tadej", "Tarling, Joshua", "Uijtdebroeks, Cian", "Van Sintmaartensdijk, Roel"];
+const ABANDONOS_PRECARGADOS = ["chumil gonzalez, sergio geovani","kirsch, alex","uijtdebroeks, cian","van sintmaartensdijk, roel","beloki, markel","tarling, joshua","pogacar, tadej","gaffuri, mattia","uriarte belzunegi, diego","van boven, luca","van tricht, floris"];
 /*__MARCA_RESULTADOS_FIN__*/
 
 
@@ -6766,8 +7594,7 @@ function descargarHTMLCompleto(){
           <button type="button" class="btn-small" onclick="asistAddFinal()">🏆 + Final</button>
           <label class="btn-small" style="cursor:pointer;position:relative">
             📂 Importar CSV
-            <input type="file" id="csv-etapas-input" accept=".csv,.txt" style="position:absolute;opacity:0;width:1px;height:1px"
-              onchange="importarEtapasCSV(this)">
+            <input type="file" id="csv-etapas-input" accept=".csv,.txt" style="position:absolute;opacity:0;width:1px;height:1px" onchange="importarEtapasCSV(this)">
           </label>
           <button type="button" class="btn-small" style="margin-left:auto;border-color:var(--rojo);color:var(--rojo)" onclick="asistLimpiarEtapas()">🗑 Limpiar</button>
         </div>
@@ -6847,5 +7674,6 @@ function descargarHTMLCompleto(){
     </div>
   </div>
 </div>
-</body>
-</html>
+
+
+</body></html>
